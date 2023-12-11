@@ -1,0 +1,483 @@
+eliska vrzalova
+27/11/2023
+est time: 15 min
+act time: 7 min
+Q1
+
+main()
+start function
+
+set random numbers generator;
+
+generateRandom(); //function call
+
+end function
+
+
+generateRandom
+start function
+
+count = 1;
+sum = 0;
+number = 0;
+
+while(count <= 10)
+	number = (rand()%40) +1;
+	display message "" + number;
+	sum = sum + number;
+	count ++;
+end while
+display message "The sum of the numbers is" + sum;
+----------------------------------------------------------------
+
+eliska vrzalova
+27/11/2023
+est time: 15 min
+act time: 
+Q2
+
+main ()
+start function
+
+sum = 0;
+set random numbers generator;
+
+sum = generateRandomEven(); //function call
+display message"The sum of the numbers is:" + sum;
+
+end function
+
+generateRandomEven()
+start function
+
+count = 10;
+sum = 0;
+number = 0;
+
+while(count <=10)
+	number = (rand()% 41) + 10;
+	if(number %2 == 0)
+		sum = sum + number;
+		count ++;
+	end if
+end while
+return sum;
+
+end function
+----------------------------------------------------------------------
+eliska vrzalova
+27/11/2023
+est time: 15 min
+act time: 
+Q3
+
+main()
+start function
+
+//variables
+numberOfNumbers = 0;
+//input
+display message "Enter the number of numbers:";
+input numberOfNumbers;
+
+//error checking
+if(numberOfNumbers <= 0)
+	display message "Error: number entered cannot be less than 0.";
+else
+	calculateNumbers(numberOfNumbers); //function call
+end if
+
+end function
+
+calculateNumbers(t_numberOfNumbers)
+start function
+
+sum = 0;
+sumOdd= 0;
+count = 1;
+number = 0;
+
+while(count <= t_numberOfNumbers)
+	display message "Enter number:" + number;
+        input number;
+	sum = sum + number
+	if(number % 2 == 1)
+		sumOdd == sumOdd + number;
+	count++;
+end while
+
+display message "The sum of the numbers:" + sum;
+display message "The sum of odd numbers:" + sumOdd;
+
+end function
+--------------------------------------------------------------------------------------------
+eliska vrzalova
+27/11/2023
+est time: 15 min
+act time: 
+Q4
+
+main()
+start function
+
+//variables
+numberOfNumbers = 0;
+average = 0;
+//input
+display message "Enter the number of numbers:";
+input number;
+
+//error checking
+while(numberOfNumbers <= 0)
+	display message "Error: number entered cannot be less than 0.";
+	display message "Enter the number of numbers:";
+	input numberOfNumbers;
+end while
+
+average = calculationsNum(numberOfNumbers); //function call
+
+end function
+
+calculationsNum(t_numberOfNumbers)
+start function
+
+number = 0;
+sum = 0;
+count = 1;
+largestNum = 5;
+lowestNum = 15;
+averageNum = 0;
+
+
+while(count <= t_numberOfNumbers)
+	display message "Enter number:" +;
+        input number;
+	if(number >= 5 and number <= 15)
+		sum = sum + number;
+		if(largestNum < number)
+			largestNum = number;
+		end if
+		if(number < lowestNumber)
+			lowestNum = number;
+		end if
+	else
+		display message"Error: number must be in the range 5-15";
+	end if
+	count++;
+end while
+
+averageNum = sum / t_numberOfNumbers;
+dipslay message "The sum of the numbers is:" + sum;
+display message "The largest number is:" + largestNum;
+display message "The lowest number is:" + lowestNum;
+
+return averageNum;
+end function
+-----------------------------------------------------------------------------------
+eliska vrzalova
+29/11/2023
+est time: 15 min
+act time: 
+Q5
+
+main()
+start function
+
+startNum = 0;
+endNum = 0;
+sum = 0;
+
+//ask user for input
+display message "Enter the starting number:";
+input startNum;
+display message "Enter the ending number:";
+input endNum;
+
+//error checking
+if(startNum <= 0 or endNum <= 0)
+	display message "Error: the numbers entered must be greater than 0";
+end if
+if(startNum > endNum)
+	display message "Error: ending number must be greater than starting number.";
+end if 
+
+sum = addNumbers(startNum, endNum) //function call
+display message "The sum of the numbers is:" + sum;
+
+end function
+
+addsNumbers(t_startNum, t_endNum)
+start function
+
+sum = 0;
+count = 0;
+
+for(count = t_startNum; count <= t_endNum, count++)
+	sum = sum + t_startNum;
+end for
+
+return sum;
+end function
+---------------------------------------------------------------------------------------------
+eliska vrzalova
+29/11/2023
+est time: 15 min
+act time: 
+Q6
+
+main()
+start function
+
+sum = 0;
+
+sum = sumTotal(); //function
+display message "The sum of the numbers is:" + sum; //answer
+end function
+
+sumTotal()
+start function
+
+sum = 0;
+number = -1;
+
+while(number != 0)
+	display message "Enter number:";
+       	input number;
+	if(number >= 5 && number <=12)
+		sum = sum + number;
+	else
+		display message "Error:number must be in the range 5-12;
+	end if
+end while
+	
+return sum;
+end function
+-----------------------------------------------------------------------------------------------
+
+eliska vrzalova
+04/12/2023
+est time: 15 min
+act time: 
+Q7
+
+main()
+start function
+
+choice = 0;
+do
+	display message "Option 1 : Fahrenheit to Celsius conversion";
+	display message "Option 2 : Inches to Centimeters conversion";
+	display message "Option 3 : Exit";
+	display message "Enetr the number of your choice";
+	input choice;
+	switch
+	case 1:
+		FahrenheitToCelsius();
+	case 2:
+		InchesToCentimeters();
+	while(choice != 3); //end do while
+end function
+
+FahrenheitToCelsius()
+start function
+
+fahrenheit = 0;
+celsius = 0;
+CONVERSION = 9/5;
+//input
+display message "Enter the temperature in Fahrenheit:";
+input fahrenheit;
+//conversion
+celsius = (fahrenheit -32)/ CONVERSION;
+display message "The temperature in Celsius is" + celsius + "degrees.";
+
+end function
+
+InchesToCentimeters();
+start function
+
+inches = 0;
+centimeters = 0;
+CONVERSION = 2.54;
+//input
+display message "Enter the lenght in inches:";
+input inches;
+//calculation
+centimeters = inches * CONVERSION;
+display message "The lenght in centimeters is " + centimeters;
+
+end function
+--------------------------------------------------------------------------------------------
+
+eliska vrzalova
+04/12/2023
+est time: 15 min
+act time: 
+Q8
+
+main()
+start function
+
+number = 0;
+display = 0;
+//input
+display message "Enter a number:";
+input number ; 
+
+//error checking
+if(number <= 0)
+	display message "Error: number entered must be greater than 0.";
+else
+	display = reverseDisplay(number);
+	display message "" + number;
+end if
+end function
+
+reverseDisplay(t_number)
+start function
+
+while(t_number >= 0)
+	display message "" + t_number;
+	t_number = t_number - 3;
+end while
+return t_number;
+----------------------------------------------------------------------------------------------------
+	
+eliska vrzalova
+04/12/2023
+est time: 15 min
+act time: 
+Q9
+
+main()
+start function 
+
+countOccurences();
+end function
+
+countOccurences()
+start function
+count = 1;
+numberofNumbers = 0;
+number = 0;
+lowestNum = 10;
+largestNum = 1;
+largestNumOccurence = 0;
+lowestNumOccurence = 0;
+
+//input 
+display message please enter the number of numbers:";
+input numberOfNumbers;
+
+while(count >= numberOfNumbers)
+	display message "Enter a number:";
+	input number;
+	if(number >= 1 and number <= 10)
+		display message "" + number;
+		if(number > largestNum)
+			largestNum = number;
+		end if
+			if(number == largestNum)
+				largestNumOccurence = largestNumOccurence++;
+			end if
+		if(lowestNum > number)
+			lowestNum = number;
+		end if
+			if(number == lowestNum)
+				lowestNumOccurence = lowesttNumOccurence++;
+			end if
+	else
+		display message "Error: the number must be in the range 1-10";
+	end if
+	count++;
+end while
+
+
+display message "The highest number is:" + largestNum + " and occured" + largestNumOccurence + "times.";
+
+display message "The lowest number is:" + lowestNum + " and occured" + lowestNumOccurence + "times.";
+end function
+------------------------------------------------------------------------------------------------------------
+	
+eliska vrzalova
+04/12/2023
+est time: 15 min
+act time: 
+Q10
+
+main()
+start function 
+
+countOccurences();
+end function
+
+countOccurences()
+start function
+
+numberOfNumbers = 0;
+number = 0;
+count = 1;
+position = 0;
+firstPosition = 0;
+lastPosition = 0;
+TARGET_NUMBER = 9;
+findFirstposition = false;
+
+display message "Enter the number of numbers:";
+input numberOfNumbers;
+
+while(count <= numberOfNumbers)
+	position = count
+	display message "Enter a number:";
+	input number;
+	display message "" + number;
+	if(number == TARGET_NUMBER and findFirstPosition == false)
+		firstPosition = position;
+		finfFirstposition = true;
+	end if
+	if(number == TARGET_NUMBER)
+		lastPosition = position;
+	end if
+	count ++;
+end while
+if(lastPosition == 0 and firstPosition != 0)
+	lastPosition = firstPosition;
+end if
+
+display message "The first occurence of the number" + TARGET_NUMBER + "is:" + firstPosition;
+display message "The last occurence of the number" + TARGET_NUMBER + "is:" + lastPosition;
+
+
+-----------------------------------------------------------------------------------------------------------
+eliska vrzalova
+06/12/2023
+est time: 15 min
+act time: 
+Q11
+
+main()
+start function
+
+fibonacciSeries(); //function call
+end function
+
+fibonacciSeries()
+start function
+
+count = 1;
+number = 1;
+nextNumber = 0;
+sum = 0;
+
+while(count <= 20)
+	display message "" + number; 
+	sum = number;
+	sum = sum + nextNumber;
+	nextNumber = number;
+	number = sum;
+	count++;
+end while
+--------------------------------------------------------------------------------------------------------------
+
+
+
